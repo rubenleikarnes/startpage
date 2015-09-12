@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "New tab speeddial",
+  "version": "1.1",
+  "description": "My custom new tab speeddial",
+  "chrome_url_overrides": {
+  	"newtab": "index.html"
+  },
+  "incognito": "split"
+}
