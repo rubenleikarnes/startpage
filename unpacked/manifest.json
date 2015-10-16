@@ -1,10 +1,24 @@
 {
   "manifest_version": 2,
   "name": "New tab speeddial",
-  "version": "1.1",
+  "short_name": "NTSpeed",
+  "description": "Personal new tab page",
+  "version": "1.2.1",
   "description": "My custom new tab speeddial",
   "chrome_url_overrides": {
-  	"newtab": "index.html"
+  	"newtab": "main.html"
   },
-  "incognito": "split"
+  "permissions": [
+    "bookmarks",
+    "storage"
+  ],
+  "optional_permissions": [
+  	"tabs",
+  	"topSites"
+  ],
+  "incognito": "split",
+  "minimum_chrome_version" : "29",
+	"web_accessible_resources": [
+		"main.html"
+	]
 }
