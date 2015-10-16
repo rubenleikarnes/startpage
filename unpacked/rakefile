@@ -6,7 +6,7 @@
 
 server_port = "9000" # port for preview server eg. localhost:9000
 
-task :default => [:serve]
+task :default => [:build]
 
 desc "Build the scss"
 task :build do

@@ -22,12 +22,16 @@ body {
 	padding: 0;
 }
 
+small {
+	font-size: 0.8rem;
+}
+
 .home {
 	margin: 2.5% auto;
 	width: ($linkWidth + ($sizing*2)) * 5 + px; 
 }
 
-a {
+.dial {
 	float: left;
 	display: inline-block;
 	position: relative;
@@ -41,7 +45,7 @@ a {
 	counter-reset: position;
 }
 
-a:after {
+.dial:after {
 	background: rgba(0,0,0,.0);
 	width: 100%;
 	height: 100%;
@@ -49,23 +53,87 @@ a:after {
 	content: ' ';
 }
 
-a:hover:after{
+.dial:hover:after{
 	background: rgba(50,50,50,.15);
 }
 
-a:active:after {
+.dial:active:after {
 	background: rgba(50,50,50,.25);
 } 
 
-.secret:after {
-	color: #fff;
-	font-size: $sizing * 3 + px;
-	height: 100%;
-	width: 100%;
-	text-align: center;
-	padding-top: 25%;
-	display: block;
-}
-
 @import "link/*.png";
 @include all-link-sprites;
+
+
+#options, #options_button {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#options {
+	display: none;
+	font-size: 1.4em;
+	background: #fff;
+	border: solid #999;
+	border-width: 0 0 1px 1px;
+	border-bottom-left-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+	min-width: 15em;
+	min-height: 10em;
+}
+#options:target {
+	display: block;
+}
+#options_button {
+	color: #555;
+	font-size: 1.4em;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	opacity: 0.1;
+	margin: .3em;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+#options_close_button {
+	color: #000;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.4em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+}
+
+legend {
+	color: #888;
+}
+fieldset {
+	border: none;
+	margin: 1em .5em 1em 1em;
+	padding: .5em 0 0;
+}
+label {
+	display: block;
+	font-size: 0.85em;
+	text-align: right;
+	clear: left;
+	line-height: 1.9;
+}
+label span {
+	float: left;
+	text-align: left;
+	max-width: 12em;
+}
+input, select, .revert {
+	width: 9em;
+	margin: 0 0 0 .5em;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
