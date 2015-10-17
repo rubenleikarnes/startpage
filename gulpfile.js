@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	inlinesource = require('gulp-inline-source'),
 	compass = require('gulp-compass'),
 	browserSync = require('browser-sync'),
+	concat = require('gulp-concat'),
 	exec = require('child_process').exec;
 
 
@@ -11,6 +12,12 @@ gulp.task('clean', function () {
 		'./dist/*'
 	])
 })
+
+gulp.task('scripts', function() {
+  return gulp.src('app/js/*.js')
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('./dist/js/'));
+});
 
 gulp.task('compass:watch', function() {
 	exec('compass watch');
@@ -36,7 +43,7 @@ gulp.task('copy', function () {
 })
 
 gulp.task('build', ['inlinesource'], function() {
-    gulp.start('copy');
+    gulp.start('copy', 'scripts');
 });
 
 gulp.task('serve', ['compass:watch'], function() {

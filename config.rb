@@ -6,7 +6,7 @@ project_path = 'app/'
 css_dir = "css"
 sass_dir = "scss"
 images_dir = "img"
-javascripts_dir = "script"
+javascripts_dir = "js"
 relative_assets = true
 
 # You can select your preferred output style here (can be overridden via the command line):
