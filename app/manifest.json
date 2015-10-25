@@ -3,7 +3,7 @@
   "name": "New tab speeddial",
   "short_name": "NTSpeed",
   "description": "Personal new tab page",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "My custom new tab speeddial",
   "chrome_url_overrides": {
   	"newtab": "main.html"
