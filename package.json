@@ -2,8 +2,9 @@
   "name" : "Ruben Leikarnes", 
   "email" : "ruben.leikarnes@gmail.com", 
   "dependencies": {
-    "gulp": "^3.9.0",
-    "del": "^2.0.0"
+    "gulp": "^3.9.1",
+    "del": "^2.0.0",
     "gulp-compass": "^2.1.0",
     "gulp-inline-source": "^2.1.0"
+  }
 }

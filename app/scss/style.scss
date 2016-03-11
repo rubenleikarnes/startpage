@@ -16,6 +16,7 @@ $sizing: 16;
 
 body {
 	background: #efefef;
+    will-change: background;
 	font-family: sans-serif;
 	font-size: $sizing + px;
 	margin: 0;
